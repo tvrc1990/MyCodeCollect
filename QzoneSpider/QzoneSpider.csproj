@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6FA05979-DD62-45ED-8C38-749024A61DA6}</ProjectGuid>
+    <ProjectGuid>{DE0BEC7B-BECF-498A-AB7D-90F59991096D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HelperLibrary</RootNamespace>
-    <AssemblyName>HelperLibrary</AssemblyName>
+    <RootNamespace>QzoneSpider</RootNamespace>
+    <AssemblyName>QzoneSpider</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,6 +30,24 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\Reference\Jumony\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack.Adaptor">
+      <HintPath>..\Reference\Jumony\HtmlAgilityPack.Adaptor.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivony.Core">
+      <HintPath>..\Reference\Jumony\Ivony.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivony.Web.Html">
+      <HintPath>..\Reference\Jumony\Ivony.Web.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivony.Web.Html.Binding">
+      <HintPath>..\Reference\Jumony\Ivony.Web.Html.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivony.Web.Html.Parser">
+      <HintPath>..\Reference\Jumony\Ivony.Web.Html.Parser.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,10 +57,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="QzonePage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Ado\" />
+    <ProjectReference Include="..\CommonLibrary\CommonLibrary.csproj">
+      <Project>{e659d25a-8006-41ec-b515-ab44fa7e4adb}</Project>
+      <Name>CommonLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
