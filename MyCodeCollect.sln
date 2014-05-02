@@ -5,8 +5,6 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite.csproj", "{B74924F5-ACFE-40E7-9EA2-1A7C4DD7D84C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QzoneSpider", "QzoneSpider\QzoneSpider.csproj", "{DE0BEC7B-BECF-498A-AB7D-90F59991096D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibrary", "CommonLibrary\CommonLibrary.csproj", "{E659D25A-8006-41EC-B515-AB44FA7E4ADB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBHelperLibrary", "DBHelperLibrary\DBHelperLibrary.csproj", "{0D48087A-5B58-4068-AB8E-76C0E52873CF}"
@@ -14,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{9327185E-A840-4B56-A8FC-3BEECD83E43B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormApp", "WinFormApp\WinFormApp.csproj", "{A4D33F9C-C9B0-434D-B5F1-FFA117EB9748}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageSpider", "PageSpider\PageSpider.csproj", "{B91D6A9C-EEF2-4A67-9673-1EF959FEFF63}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,10 +25,6 @@ Global
 		{B74924F5-ACFE-40E7-9EA2-1A7C4DD7D84C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B74924F5-ACFE-40E7-9EA2-1A7C4DD7D84C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B74924F5-ACFE-40E7-9EA2-1A7C4DD7D84C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DE0BEC7B-BECF-498A-AB7D-90F59991096D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DE0BEC7B-BECF-498A-AB7D-90F59991096D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DE0BEC7B-BECF-498A-AB7D-90F59991096D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DE0BEC7B-BECF-498A-AB7D-90F59991096D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E659D25A-8006-41EC-B515-AB44FA7E4ADB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E659D25A-8006-41EC-B515-AB44FA7E4ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E659D25A-8006-41EC-B515-AB44FA7E4ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{A4D33F9C-C9B0-434D-B5F1-FFA117EB9748}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A4D33F9C-C9B0-434D-B5F1-FFA117EB9748}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A4D33F9C-C9B0-434D-B5F1-FFA117EB9748}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B91D6A9C-EEF2-4A67-9673-1EF959FEFF63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B91D6A9C-EEF2-4A67-9673-1EF959FEFF63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B91D6A9C-EEF2-4A67-9673-1EF959FEFF63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B91D6A9C-EEF2-4A67-9673-1EF959FEFF63}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

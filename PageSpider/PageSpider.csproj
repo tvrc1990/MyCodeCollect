@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9327185E-A840-4B56-A8FC-3BEECD83E43B}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{B91D6A9C-EEF2-4A67-9673-1EF959FEFF63}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConsoleApp</RootNamespace>
-    <AssemblyName>ConsoleApp</AssemblyName>
+    <RootNamespace>PageSpider</RootNamespace>
+    <AssemblyName>PageSpider</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -32,8 +30,27 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\Reference\Jumony\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack.Adaptor">
+      <HintPath>..\Reference\Jumony\HtmlAgilityPack.Adaptor.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivony.Core">
+      <HintPath>..\Reference\Jumony\Ivony.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivony.Web.Html">
+      <HintPath>..\Reference\Jumony\Ivony.Web.Html.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivony.Web.Html.Binding">
+      <HintPath>..\Reference\Jumony\Ivony.Web.Html.Binding.dll</HintPath>
+    </Reference>
+    <Reference Include="Ivony.Web.Html.Parser">
+      <HintPath>..\Reference\Jumony\Ivony.Web.Html.Parser.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,16 +58,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="ISpider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaoBao\TaoBao.cs" />
+    <Compile Include="TaoBao\TBPageAnalysis.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PageSpider\PageSpider.csproj">
-      <Project>{b91d6a9c-eef2-4a67-9673-1ef959feff63}</Project>
-      <Name>PageSpider</Name>
+    <ProjectReference Include="..\CommonLibrary\CommonLibrary.csproj">
+      <Project>{e659d25a-8006-41ec-b515-ab44fa7e4adb}</Project>
+      <Name>CommonLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBHelperLibrary\DBHelperLibrary.csproj">
+      <Project>{0d48087a-5b58-4068-ab8e-76c0e52873cf}</Project>
+      <Name>DBHelperLibrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
