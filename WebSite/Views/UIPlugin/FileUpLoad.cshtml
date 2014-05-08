@@ -1,0 +1,74 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FileUpLoad</title>
+    <script type="text/javascript" src="/Content/UIPlugin/FileUpload/Plupload/jquery.min.js"></script>
+    <script type="text/javascript" src="/Content/UIPlugin/FileUpload/Plupload/jquery.plupload.queue.min.js"></script>
+    <script type="text/javascript" src="/Content/UIPlugin/FileUpload/Plupload/plupload.min.js"></script>
+    <script type="text/javascript" src="/Content/UIPlugin/FileUpload/Plupload/plupload.flash.min.js"></script>
+    <style type="text/css">
+        ul li{
+            list-style:none;
+        }
+        .plupload_file_name {
+            float:left;
+        }
+        .plupload_file_status {
+            float:left;
+        }
+        .plupload_file_size {
+            float:left;
+        }
+    </style>
+    <script type="text/javascript">
+
+        $(function () {
+            // 初始化Flash上传插件
+            $("#flash_uploader").pluploadQueue({
+                runtimes: 'flash', 	//使用Flash插件
+                url: '/UIPlugin/FileUpLoad?T=plupload', 	//服务器端响应页面
+                max_file_size: '10mb', //最大文件限制
+                chunk_size: '100mb', 	//一次上传数据大小
+                unique_names: false, 	//是否自动生成唯一名称
+                filters: [				//文件类型限制
+                    { title: "文件", extensions: "doc,docx,pdf,xls,xlsx,jpg,gif,png,jpeg,zip" }
+                ],
+
+                // 缩放图片
+                resize: { width: 320, height: 240, quality: 80 },
+                multiple_queues: true,
+                // SWF文件位置
+                flash_swf_url: '/Content/UIPlugin/FileUpload/Plupload/plupload.flash.swf',
+
+                init: {
+                    FileUploaded: function (up, file, info) {
+                        //一个文件上传成功
+                        //alert(info.response);
+                        //alert("上传成功");
+                    },
+
+                    Error: function (up, args) {
+                        alert("上传失败");
+                        //发生错误
+                        //if (args.file) {
+                        //    alert('[error] File:' + args.file);
+                        //} else {
+                        //    alert('[error]' + args);
+                        //}
+                    }
+                }
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <div id="flash_uploader">上传</div>
+</body>
+</html>
