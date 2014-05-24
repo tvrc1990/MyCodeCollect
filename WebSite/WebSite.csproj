@@ -134,6 +134,27 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\bootstrap\css\default.css" />
+    <Content Include="Content\bootstrap\css\font-awesome.min.css" />
+    <Content Include="Content\bootstrap\css\style-metro.css" />
+    <Content Include="Content\bootstrap\css\style-responsive.css" />
+    <Content Include="Content\bootstrap\css\style.css" />
+    <Content Include="Content\bootstrap\image\avatar1_small.jpg" />
+    <Content Include="Content\bootstrap\image\avatar2.jpg" />
+    <Content Include="Content\bootstrap\image\fontawesome-webfont.svg" />
+    <Content Include="Content\bootstrap\image\glyphicons-regular.svg" />
+    <Content Include="Content\bootstrap\image\glyphicons-white.svg" />
+    <Content Include="Content\bootstrap\image\glyphiconshalflings-regular.svg" />
+    <Content Include="Content\bootstrap\image\glyphicons_halflings-white.svg" />
+    <Content Include="Content\bootstrap\image\glyphicons_halflings.svg" />
+    <Content Include="Content\bootstrap\image\logo.png" />
+    <Content Include="Content\bootstrap\image\search-icon.png" />
+    <Content Include="Content\bootstrap\image\sidebar-menu-arrow.png" />
+    <Content Include="Content\bootstrap\image\sidebar-toggler.jpg" />
+    <Content Include="Content\bootstrap\js\app.js" />
+    <Content Include="Content\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\bootstrap\js\jquery-1.10.1.min.js" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
@@ -222,13 +243,13 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\UIPlugin\FileUpLoad.cshtml" />
+    <Content Include="Views\Shared\_MainLayout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="FileDirectory\UpLoadFile\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
